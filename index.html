@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,13 +7,15 @@
     <link rel="stylesheet" href="styles/main.css" type='text/css'>
   </head>
   <body ng-app="todoListApp">
+    <hello-world></hello-world>
+    <div hello-world>This will get replaced</div>
     <h1>My TODOs</h1>
     <div ng-controller="mainCtrl" class="list">
-        <input type="checkbox"/>
-        <label class="editing-label">A sample todo!</label>
-        <input class="editing-label" type="text"/>
+        <input ng-model="todo.completed" type="checkbox"/>
+        <label ng-hide="editing" class="editing-label">{{todo.name}}</label>
+        <input ng-show="editing" ng-model="todo.name" class="editing-label" type="text"/>
       <div class="actions">
-        <a href="">edit</a>
+        <a href="" ng-click="editing = !editing">edit</a>
         <a href="" ng-click="helloWorld()">save</a>
         <a href="" class="delete">delete</a>
       </div>
