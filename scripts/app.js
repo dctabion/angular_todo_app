@@ -3,6 +3,10 @@ angular.module("todoListApp", [])
   $scope.helloWorld = function() {
     console.log("Hello there! This is the helloWorld controller function, in the mainCtrl");
   };
+  $scope.learningNgChange = function() {
+    console.log("An input changed!! Inside learningNgChange()");
+  };
+
 
 $scope.todos = [
   {"name": "clean the house"},
