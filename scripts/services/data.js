@@ -17,8 +17,9 @@ angular.module('todoListApp')
     // other logic here to delete in the rest API
   };
 
-  this.saveTodo = function(todo) {
-    console.log("The " + todo.name + " has been saved");
+  this.saveTodos = function(todos) {
+    console.log(todos.length + " todos have been saved");
+
     // other logic here to contact server / rest API
   };
 
